@@ -6,7 +6,7 @@ function swap(array, a, b) {
 }
 
 function split(array) {
-  const middle = Math.floor(array.length / 2) + 1;
+  const middle = Math.floor(array.length / 2);
   const firstHalf = array.slice(0, middle);
   const secondHalf = array.slice(middle);
   return [firstHalf, secondHalf];
@@ -30,4 +30,9 @@ function mergeSort(arr) {
   if (arr.length === 1) {
     return arr;
   }
+  debugger;
+  let left = split(arr)[0];
+  let right = split(arr)[1];
+
+  return merge(mergeSort(left), mergeSort(right));
 }

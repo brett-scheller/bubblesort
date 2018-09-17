@@ -1,6 +1,6 @@
 describe('Bubble Sort', function(){
   beforeAll(function () {
-    spyOn(window, 'swap').and.callThrough(); // replace existing `tootsiepop['lick']` method
+    spyOn(window, 'swap').and.callThrough();
   });
 
   it('handles an empty array', function(){
@@ -14,7 +14,11 @@ describe('Bubble Sort', function(){
 
   it('sorts an array', function () {
     expect(bubbleSort([3, 2, 1])).toEqual([1, 2, 3]);
-    });
+  });
+
+  it('sorts an array', function () {
+    expect(bubbleSort([8, 6, 7, 5, 3, 0, 9])).toEqual([0, 3, 5, 6, 7, 8, 9]);
+  });
 
 });
 

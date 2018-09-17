@@ -15,5 +15,3 @@ function swap(array, a, b) {
   array[a] = bval;
   array[b] = aval;
 }
-
-bubbleSort([3, 2, 1]);
